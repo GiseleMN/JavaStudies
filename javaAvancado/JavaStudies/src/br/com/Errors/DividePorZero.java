@@ -1,0 +1,41 @@
+package br.com.Errors;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+
+public class DividePorZero {
+	public static void main(String[]args) {
+		
+		
+		Scanner s = new Scanner(System.in);
+		boolean continuar = true;
+		do {
+			try {
+		
+		System.out.println("numero: ");
+		
+		int a = s.nextInt();
+		System.out.println("Divisor: ");
+		
+		int b = s.nextInt();
+		double result = a/b;
+		System.out.println(result);
+		continuar = false;
+		}
+			catch (InputMismatchException e1) {
+			/*Erro_por_digito_de_caracteres*/
+			System.err.println("Erro de Input MismatchException capturado! Favor inserir números inteiro");
+			s.nextLine(); /*Descarta_entrada_inválida*/
+			
+		}
+			catch(Throwable e2) {
+			/*Erros_reproduzidos_pelo_programa*/
+			System.err.println("Erro de ArithmatihException capturado! O divisor deve ser diferente de zero!");
+		}
+			finally {
+			System.out.println("Finally executado...");
+			}
+		}while(continuar);
+		}
+	}

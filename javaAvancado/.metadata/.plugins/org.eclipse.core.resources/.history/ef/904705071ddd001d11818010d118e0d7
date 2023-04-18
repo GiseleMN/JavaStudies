@@ -1,0 +1,31 @@
+package br.com.newMyProject;
+
+public class Conta {
+	String Cliente;
+	double saldo;
+	
+	void exibeSaldo() {
+		System.out.println(Cliente + " voce possui R$"+ saldo + " de saldo.");
+	}
+	
+	
+	void saque(double valor) {
+		saldo -= valor;
+		System.out.println(Cliente + " voce fez um saque de R$"+ valor + " de saldo.");
+	}
+	
+	void deposito(double valor) {
+		saldo+=valor;
+		System.out.println(Cliente + " voce fez um deposito de R$"+ valor + " de saldo.");
+	}
+	
+	void transferencia(Conta destino,double valor) {
+		this.saque(valor);
+		destino.deposito(valor);
+		
+		System.out.println(Cliente + " voce fez uma transferencia no valor de R$"+ valor );
+	}
+	
+	
+
+}

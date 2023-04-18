@@ -1,0 +1,12 @@
+package br.com.newMyProject;
+
+public class ContaTeste {
+	 public static void main(String[]args) {
+		 Conta conta = new Conta();
+		 conta.Cliente = "Joana";
+		 conta.saldo = 4_000.00;
+		 conta.exibeSaldo();
+	 }
+	
+}
+

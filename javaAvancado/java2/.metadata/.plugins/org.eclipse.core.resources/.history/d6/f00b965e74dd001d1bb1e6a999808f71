@@ -1,0 +1,14 @@
+package ProjetoJava;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Layouts extends JFrame {
+	
+		
+		public static void main(String[]args) {
+			new Layouts();
+		}
+	}
+
+}

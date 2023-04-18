@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author giselehorii
+ *
+ */
+module JavaStudies {
+}

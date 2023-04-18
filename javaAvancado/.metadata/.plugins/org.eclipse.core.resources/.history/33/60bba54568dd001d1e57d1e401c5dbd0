@@ -1,0 +1,31 @@
+package br.com.Errors;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+
+public class DividePorZero {
+	public static void main(String[]args) {
+		
+		try {
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println("numero: ");
+		
+		int a = s.nextInt();
+		System.out.println("Divisor: ");
+		
+		int b = s.nextInt();
+		double result = a/b;
+		System.out.println(result);
+		}catch (InputMismatchException e1) {
+			/*Erro_por_digito_de_caracteres*/
+			System.out.println("Erro de Input MismatchException capturado!");
+		}catch(Throwable e2) {
+			/*Erros_reproduzidos_pelo_programa*/
+			System.out.println("Erro de ArithmatihException capturado!");
+		}
+		
+	}
+	
+}

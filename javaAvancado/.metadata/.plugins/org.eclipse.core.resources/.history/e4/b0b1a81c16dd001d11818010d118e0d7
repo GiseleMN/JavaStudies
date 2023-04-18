@@ -1,0 +1,11 @@
+package br.com.newMyProject;
+
+public class Conta {
+	String Cliente;
+	double saldo;
+	
+	void exibeSaldo() {
+		System.out.println(Cliente + " voce possui R$"+ saldo + " de saldo.");
+	}
+
+}
